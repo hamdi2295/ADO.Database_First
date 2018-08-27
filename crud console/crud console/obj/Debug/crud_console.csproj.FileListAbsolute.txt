@@ -1,0 +1,8 @@
+C:\Users\Alhamda\Documents\Visual Studio 2015\Projects\crud console\crud console\bin\Debug\crud console.exe.config
+C:\Users\Alhamda\Documents\Visual Studio 2015\Projects\crud console\crud console\bin\Debug\crud console.exe
+C:\Users\Alhamda\Documents\Visual Studio 2015\Projects\crud console\crud console\bin\Debug\crud console.pdb
+C:\Users\Alhamda\Documents\Visual Studio 2015\Projects\crud console\crud console\bin\Debug\EntityFramework.dll
+C:\Users\Alhamda\Documents\Visual Studio 2015\Projects\crud console\crud console\bin\Debug\EntityFramework.xml
+C:\Users\Alhamda\Documents\Visual Studio 2015\Projects\crud console\crud console\obj\Debug\crud_console.csprojResolveAssemblyReference.cache
+C:\Users\Alhamda\Documents\Visual Studio 2015\Projects\crud console\crud console\obj\Debug\crud console.exe
+C:\Users\Alhamda\Documents\Visual Studio 2015\Projects\crud console\crud console\obj\Debug\crud console.pdb
