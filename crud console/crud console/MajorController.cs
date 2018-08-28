@@ -1,4 +1,4 @@
-﻿using crud_console.Koneksi;
+﻿using crud_console.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace crud_console
 {
     class MajorController
     {
-        Koneksi.universityEntities4 _context = new Koneksi.universityEntities4();
+        Models.universityEntities4 _context = new Models.universityEntities4();
 
         public void major_page()
         {
@@ -56,8 +56,8 @@ namespace crud_console
             System.Console.WriteLine("-----------------------------------------");
             System.Console.Write("ID jurusan       : "); int ID_Jurusan = Convert.ToInt32(System.Console.ReadLine());
             System.Console.Write("Nama Jurusan     : "); string Nama_Jurusan = System.Console.ReadLine();
-            
-            Koneksi.major call = new Koneksi.major();
+
+            Models.major call = new Models.major();
             {
                 call.major_id = ID_Jurusan;
                 call.major_name = Nama_Jurusan;
@@ -79,7 +79,7 @@ namespace crud_console
 
             System.Console.Write("Nama Jurusan     : "); string Nama_Jurusan = System.Console.ReadLine();
 
-            Koneksi.major jurusan = GetById(input);
+            Models.major jurusan = GetById(input);
             jurusan.major_name = Nama_Jurusan;
             
             _context.Entry(jurusan).State = System.Data.EntityState.Modified;
@@ -87,14 +87,16 @@ namespace crud_console
             return input;
         }
 
-        public List<Koneksi.major> GetAll()
+        public List<Models.major> GetAll()
         {
             var getall = _context.majors.ToList();
-            foreach (Koneksi.major jurusan in getall)
+            foreach (Models.major jurusan in getall)
             {
-                System.Console.WriteLine("================");
+                System.Console.WriteLine("===================================================");
                 System.Console.WriteLine("Id Jurusan        : " + jurusan.major_id);
                 System.Console.WriteLine("Nama Jurusan      : " + jurusan.major_name);
+                System.Console.WriteLine("===================================================");
+
             }
             Console.ReadKey(true);
             return getall;
@@ -102,7 +104,7 @@ namespace crud_console
         }
 
 
-        public Koneksi.major GetById(int input)
+        public Models.major GetById(int input)
         {
             var jurusan = _context.majors.Find(input);
             if (jurusan == null)
@@ -114,9 +116,13 @@ namespace crud_console
 
         public int Delete(int input)
         {
-            Major jurusan = GetById(input);
-            _context.SaveChanges();
-            _context.SaveChanges();
+
+            using (var ctx = new universityEntities4())
+            {
+                var x = (from y in ctx.majors where y.major_id == input select y).FirstOrDefault();
+                ctx.majors.Remove(x);
+                ctx.SaveChanges();
+            }
             return input;
         }
     }
