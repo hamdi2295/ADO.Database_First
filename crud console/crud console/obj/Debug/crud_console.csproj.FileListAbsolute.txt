@@ -6,3 +6,6 @@ C:\Users\Alhamda\Documents\Visual Studio 2015\Projects\crud console\crud console
 C:\Users\Alhamda\Documents\Visual Studio 2015\Projects\crud console\crud console\obj\Debug\crud_console.csprojResolveAssemblyReference.cache
 C:\Users\Alhamda\Documents\Visual Studio 2015\Projects\crud console\crud console\obj\Debug\crud console.exe
 C:\Users\Alhamda\Documents\Visual Studio 2015\Projects\crud console\crud console\obj\Debug\crud console.pdb
+E:\MII\crud console\crud console\bin\Debug\crud console.exe.config
+E:\MII\crud console\crud console\obj\Debug\crud console.exe
+E:\MII\crud console\crud console\obj\Debug\crud console.pdb
